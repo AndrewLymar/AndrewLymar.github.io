@@ -1,0 +1,958 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/BebasNeueRegular/BebasNeueRegular.eot");
+  src: url("../fonts/BebasNeueRegular/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueRegular/BebasNeueRegular.woff") format("woff"), url("../fonts/BebasNeueRegular/BebasNeueRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/BebasNeueBold/BebasNeueBold.eot");
+  src: url("../fonts/BebasNeueBold/BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueBold/BebasNeueBold.woff") format("woff"), url("../fonts/BebasNeueBold/BebasNeueBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Lobster";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/LobsterRegular/LobsterRegular.eot");
+  src: url("../fonts/LobsterRegular/LobsterRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/LobsterRegular/LobsterRegular.woff") format("woff"), url("../fonts/LobsterRegular/LobsterRegular.ttf") format("truetype"); }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  line-height: 1.75; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+.flex-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.flex-left {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.flex-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.flex-right {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.flex-around {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
+.flex-between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.flex-top {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.flex-middle {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.flex-bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.button, .new-products .shop-button, .featured .product .buy-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3CC395;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer; }
+  .button:hover, .new-products .shop-button:hover, .featured .product .buy-button:hover {
+    color: #188D76; }
+
+.search-field {
+  width: 100%;
+  border: 1px solid #E1E1E1;
+  border-radius: 2px;
+  background-image: url("../img/search.png");
+  background-repeat: no-repeat;
+  background-position: 98% center; }
+
+.top-content {
+  max-width: 985px;
+  margin: auto; }
+  .top-content .logo {
+    margin: 0;
+    font-family: "Lobster", serif;
+    font-size: 50px;
+    color: #3CC3B5;
+    cursor: pointer; }
+  .top-content .search {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 436px; }
+    .top-content .search input.search-field {
+      height: 33px; }
+  .top-content .cart {
+    margin-top: -7px;
+    cursor: pointer; }
+    .top-content .cart img {
+      width: 41px;
+      height: 37px;
+      margin-right: 18px; }
+    .top-content .cart .total-price {
+      margin-top: 6px;
+      font-family: "BebasNeue", sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #A1A1A1; }
+
+nav {
+  background-color: #4CCFC1; }
+  nav .mobile-menu-icon {
+    display: none; }
+  nav .mobile-search {
+    display: none; }
+  nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0px;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    nav ul li {
+      color: #fff;
+      margin-right: 13px;
+      font-family: "BebasNeue", sans-serif;
+      font-size: 21px;
+      list-style: none; }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        white-space: nowrap; }
+        nav ul li a:hover {
+          color: #f0f0f0; }
+
+.s-banner {
+  background: url("../img/background.jpg"); }
+
+.banner {
+  width: 800px;
+  color: #fff;
+  padding-top: 42px;
+  padding-bottom: 42px; }
+  .banner .banner-img-container {
+    max-width: 250px; }
+    .banner .banner-img-container img {
+      display: block;
+      max-width: 100%;
+      height: auto; }
+  .banner .banner-text-container {
+    width: 400px; }
+    .banner .banner-text-container h2 {
+      font-family: "BebasNeue";
+      font-size: 61px;
+      line-height: 1.0em; }
+    .banner .banner-text-container p {
+      font-family: "Opensans", sans-serif;
+      font-size: 15px; }
+    .banner .banner-text-container .button-banner {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 139px;
+      height: 46px;
+      border: 3px solid #fff;
+      border-radius: 7px;
+      background-color: rgba(255, 255, 255, 0);
+      font-family: "BebasNeue", sans-serif;
+      font-size: 27px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer; }
+  .banner .dots .dot {
+    width: 9px;
+    height: 9px;
+    margin-top: 50px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #fff; }
+    .banner .dots .dot.active {
+      background-color: rgba(255, 255, 255, 0.49); }
+
+.new-products {
+  max-width: 1215px;
+  margin: 0 auto; }
+  .new-products h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #AFAFAF;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 27px;
+    line-height: 1.0em;
+    font-weight: 600; }
+  .new-products .img-container {
+    margin-right: 60px; }
+  .new-products .new-product {
+    padding: 25px 65px 32px 25px;
+    border-right: 1px solid #E7E7E7; }
+    .new-products .new-product img {
+      display: block;
+      max-width: 220px;
+      height: auto; }
+    .new-products .new-product:nth-child(4) {
+      border: none; }
+  .new-products .shop-button {
+    width: 60px;
+    height: 32px; }
+  .new-products .arrow {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+
+.s-divider {
+  background-color: #3DC4B6; }
+
+.divider {
+  height: 68px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .divider h2 {
+    padding-left: 175px;
+    font-family: "BebasNeue", sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: #fff; }
+
+.featured {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  max-width: 950px;
+  margin-bottom: 50px; }
+  .featured .product {
+    width: 250px;
+    height: 260px;
+    margin-top: 45px;
+    border: 1px solid #E4E4E4;
+    border-bottom: 5px solid #3CC395;
+    border-radius: 4px;
+    font-family: "BebasNeue", sans-serif;
+    -webkit-box-shadow: 0px 0px 0px 1px #f6f6f6;
+            box-shadow: 0px 0px 0px 1px #f6f6f6;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    padding-left: 50px; }
+    .featured .product h3 {
+      margin: 0;
+      text-align: center;
+      font-size: 27px;
+      font-weight: 600;
+      color: #AFAFAF;
+      line-height: 1.0em; }
+    .featured .product .product-text-container {
+      margin-top: auto; }
+    .featured .product .img-container {
+      margin: 0 auto;
+      max-width: 250px; }
+    .featured .product img {
+      display: block;
+      max-width: 100%;
+      height: auto; }
+    .featured .product .price {
+      font-size: 27px;
+      font-weight: bold;
+      color: #AFAFAF; }
+    .featured .product .buy-button {
+      width: 75px;
+      height: 35px; }
+
+footer {
+  background-color: #3CC3B5;
+  color: #fff; }
+  footer .brands-container {
+    width: 100%;
+    max-width: 880px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    footer .brands-container ul {
+      padding: 0;
+      list-style: none; }
+      footer .brands-container ul li {
+        padding-left: 3px;
+        font-family: "Opensans", sans-serif;
+        font-size: 15px; }
+        footer .brands-container ul li:first-child {
+          padding-left: 0px;
+          font-family: "BebasNeue";
+          font-size: 27px;
+          font-weight: bold;
+          text-transform: uppercase; }
+        footer .brands-container ul li a {
+          color: #fff;
+          text-decoration: none; }
+          footer .brands-container ul li a:hover {
+            text-decoration: underline; }
+      footer .brands-container ul .brands-container {
+        padding-left: 5px; }
+  footer .copyrighting {
+    height: 46px;
+    background-color: #2DA89B;
+    font-family: "Opensans", sans-serif;
+    font-size: 15px; }
+
+@media only screen and (max-width: 1200px) {
+  .top-content {
+    padding-left: 15px;
+    padding-right: 15px; }
+  nav ul {
+    padding-left: 25px;
+    padding-right: 25px; }
+  .divider {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .divider h2 {
+      padding: 0; }
+  .new-product:nth-child(3) {
+    display: none; } }
+
+@media only screen and (max-width: 992px) {
+  .top-content .grid-cols .search {
+    width: 350px; }
+  nav ul {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .banner {
+    padding-left: 20px;
+    padding-right: 40px; }
+  .brands-container {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .new-products .new-product {
+    border-right: none; }
+  .new-products .new-product:nth-child(3) {
+    display: none; }
+  .new-products .img-container {
+    max-width: 150px;
+    height: auto; }
+  .featured {
+    padding-left: 5%;
+    padding-right: 5%; }
+    .featured .product {
+      margin-right: 2%;
+      margin-left: 2%; } }
+
+@media only screen and (max-width: 768px) {
+  .top-content .search {
+    display: none; }
+  nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative; }
+    nav .mobile-menu-icon {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 35px;
+      height: 35px;
+      margin-left: 25px;
+      background: url(../img/nav-icon.png) no-repeat;
+      cursor: pointer; }
+    nav .search-field {
+      width: 100%;
+      border: 1px solid #E1E1E1;
+      border-radius: 2px;
+      background-image: url("../img/search.png");
+      background-repeat: no-repeat;
+      background-position: 98% center; }
+    nav .mobile-search {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 150px;
+      margin-right: 25px; }
+      nav .mobile-search input.search-field {
+        height: 25px; }
+    nav ul {
+      width: 100%;
+      display: none;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      position: absolute;
+      top: 45px;
+      left: 0; }
+      nav ul li {
+        margin: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #fff;
+        border-bottom: 1px solid #E2E2E2;
+        cursor: pointer; }
+        nav ul li:nth-child(even) {
+          display: none; }
+        nav ul li:last-child {
+          border-bottom: 0; }
+        nav ul li:hover {
+          background-color: #43B6A8; }
+          nav ul li:hover a {
+            color: #fff; }
+        nav ul li a {
+          margin: 0 auto;
+          color: #555; }
+  .banner {
+    padding-left: 0px;
+    padding-right: 0px; }
+  .banner-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 25px; }
+    .banner-content .banner-img-container,
+    .banner-content .banner-text-container {
+      width: 90%;
+      margin: 0 auto; }
+  .brands-container ul {
+    margin-left: 9%;
+    margin-right: 9%; }
+  .new-products {
+    padding-left: 10px;
+    padding-right: 10px; }
+    .new-products .new-product {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 15px; }
+      .new-products .new-product .img-container {
+        margin: 0; }
+      .new-products .new-product .shop-button {
+        -webkit-align-self: center;
+            -ms-flex-item-align: center;
+                align-self: center; } }
+
+@media only screen and (max-width: 480px) {
+  .new-products .new-product {
+    display: none;
+    padding-left: 0px;
+    padding-right: 0px; }
+    .new-products .new-product:nth-child(2) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; } }
