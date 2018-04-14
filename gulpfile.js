@@ -20,15 +20,15 @@ var gulp = require('gulp'),
 
 gulp.task('js', function () {
 	return gulp.src([
-		'app/libs/*.js',
-		'app/js/data.js',
-		'app/js/showData.js',
-		'app/js/changeImage.js',
-		'app/js/common.js'
+		'src/libs/*.js',
+		'src/js/data.js',
+		'src/js/showData.js',
+		'src/js/changeImage.js',
+		'src/js/common.js'
 		])
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('app/js'))
+		.pipe(gulp.dest('src/js'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
@@ -37,7 +37,7 @@ gulp.task('js', function () {
 gulp.task('browser-sync', function () {
 	browserSync({
 		server: {
-			baseDir: 'app'
+			baseDir: 'src'
 		},
 		notify: false,
 		// tunnel: true,
@@ -46,7 +46,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('sass', function () {
-	return gulp.src('app/scss/**/*.scss')
+	return gulp.src('src/scss/**/*.scss')
 		.pipe(sass({
 			outputStyle: 'expand'
 		}).on("error", notify.onError()))
@@ -56,20 +56,20 @@ gulp.task('sass', function () {
 		}))
 		.pipe(autoprefixer(['last 5 versions']))
 		.pipe(cleanCSS())
-		.pipe(gulp.dest('app/css'))
+		.pipe(gulp.dest('src/css'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
 });
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
-	gulp.watch('app/scss/**/*.scss', ['sass']);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/*.html', browserSync.reload);
+	gulp.watch('src/scss/**/*.scss', ['sass']);
+	gulp.watch(['libs/**/*.js', 'src/js/common.js'], ['js']);
+	gulp.watch('src/*.html', browserSync.reload);
 });
 
 gulp.task('svg', function () {
-	return gulp.src('app/img/icons/*.svg')
+	return gulp.src('src/img/icons/*.svg')
 		// minify svg
 		.pipe(svgmin({
 			js2svg: {
@@ -97,11 +97,11 @@ gulp.task('svg', function () {
 				}
 			}
 		}))
-		.pipe(gulp.dest('app/img/icons/'));
+		.pipe(gulp.dest('src/img/icons/'));
 });
 
 gulp.task('imagemin', function () {
-	return gulp.src('app/img/**/*')
+	return gulp.src('src/img/**/*')
 		// .pipe(cache(imagemin())) // Cache Images
 		.pipe(imagemin())
 		.pipe(gulp.dest('dist/img'));
@@ -110,20 +110,20 @@ gulp.task('imagemin', function () {
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function () {
 
 	var buildFiles = gulp.src([
-		'app/*.html',
-		'app/.htaccess',
+		'src/*.html',
+		'src/.htaccess',
 		]).pipe(gulp.dest('dist'));
 
 	var buildCss = gulp.src([
-		'app/css/main.min.css',
+		'src/css/main.min.css',
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([
-		'app/js/scripts.min.js',
+		'src/js/scripts.min.js',
 		]).pipe(gulp.dest('dist/js'));
 
 	var buildFonts = gulp.src([
-		'app/fonts/**/*',
+		'src/fonts/**/*',
 		]).pipe(gulp.dest('dist/fonts'));
 
 });
