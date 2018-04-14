@@ -8,8 +8,8 @@ var data = {
 		copyright: "&#169; 2018 Andrey Lymar",
 	},
 	links: {
-		github: "<a href='https://github.com/AndrewLymar' target='_blank'><svg class = 'social-icon'><use xlink: href = 'https://andrewlymar.github.io/andrewlymar.github.io/img/icons/sprite.svg#github'></use></svg ></a>",
-		codepen: "<a href='https://codepen.io/AndrewLymar' target='_blank'><svg class = 'social-icon'><use xlink: href = 'https://andrewlymar.github.io/andrewlymar.github.io/img/icons/sprite.svg#codepen'></use></svg ></a>",
-		linkedin: "<a href='https://www.linkedin.com/in/andrey-lymar-91b145144/' target='_blank'><svg class = 'social-icon'><use xlink: href = 'https://andrewlymar.github.io/andrewlymar.github.io/img/icons/sprite.svg#linkedin'></use></svg ></a>"
+		github: "<a href='https://github.com/AndrewLymar' target='_blank'><svg class = 'social-icon'><use xlink: href = 'https://andrewlymar.github.io/img/icons/sprite.svg#github'></use></svg ></a>",
+		codepen: "<a href='https://codepen.io/AndrewLymar' target='_blank'><svg class = 'social-icon'><use xlink: href = 'https://andrewlymar.github.io/img/icons/sprite.svg#codepen'></use></svg ></a>",
+		linkedin: "<a href='https://www.linkedin.com/in/andrey-lymar-91b145144/' target='_blank'><svg class = 'social-icon'><use xlink: href = 'https://andrewlymar.github.io/img/icons/sprite.svg#linkedin'></use></svg ></a>"
 	}
 }
