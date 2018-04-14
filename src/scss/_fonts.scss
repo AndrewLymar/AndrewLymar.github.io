@@ -1,0 +1,6 @@
+@import "_mixins/font-face";
+
+@include font-face("BebasNeue", "../fonts/BebasNeueRegular/BebasNeueRegular");
+@include font-face("BebasNeue", "../fonts/BebasNeueBold/BebasNeueBold", bold);
+@include font-face("OpenSans", "../fonts/OpenSansRegular/OpenSansRegular");
+@include font-face("Lobster", "../fonts/LobsterRegular/LobsterRegular");

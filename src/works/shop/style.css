@@ -1,0 +1,830 @@
+/******RESET******/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******GENERAL******/
+body {
+    @import url(http://fonts.googleapis.com/css?family=Dosis:400,600);
+}
+
+@font-face {
+    font-family: Telegrafico; 
+    src: url('fonts/telegrafico.ttf');
+}
+
+@font-face {
+    font-family: Dosis-Book; 
+    src: url('fonts/Dosis-Book.ttf');
+}
+
+@font-face {
+    font-family: TerminalDosis-Regular; 
+    src: url('fonts/TerminalDosis-Regular.ttf');
+}
+
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'ChelseaMarketRegular';
+	src: url('fonts/ChelseaMarketRegular.eot');
+	src: local('ChelseaMarketRegular'), url('fonts/ChelseaMarketRegular.woff') format('woff'), url('fonts/ChelseaMarketRegular.ttf') format('truetype');
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/******STRUCTURE******/
+
+#wrapper {   
+    background: url("img/background.png") 100%; 
+}
+
+#header {
+    min-width: 980px;
+    width: 100%;
+}
+
+#content {
+    width: 940px;
+    margin: 0 auto;
+    margin-bottom: 195px;
+}
+
+#footer {
+    min-width: 980px;
+    width: 100%;
+}
+
+.header-content {
+    width: 940px;
+    height: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.footer-content {
+    width: 940px;
+    margin: 0 auto; 
+}
+/******HEADER******/
+
+/*Header-top*/
+
+.header-top {
+    background: url(img/header-top-bg.png) repeat-x;
+    height: 79px;
+}
+
+.logo-text {
+    float: left;
+    margin-left: 15px;
+    font-family: Telegrafico, serif;
+    font-size: 17px;
+    color: #fff;
+    height: 100%;
+}
+
+.logo-text:before {
+    display: inline-block;
+    content: '';
+    height: 100%;
+    vertical-align: middle;
+}
+
+.logo-image {
+    float: left;
+    margin-top: 16px; 
+}
+
+.logo-text h1 {
+    display: inline-block;
+    font-family: 'ChelseaMarketRegular', cursive, serif;
+    font-size: 34px;
+    color: #fff;
+    cursor: default;
+    vertical-align: middle;
+}
+
+.logo-text .slogan {
+    display: inline-block;
+    margin-left: 25px;   
+    margin-top: 5px;
+    cursor: default;
+    vertical-align: middle;
+}
+
+ul.account {
+    float: right;
+    height: 100%;
+}
+
+.account:before {
+    display: inline-block;
+    content: '';
+    height: 100%;
+    vertical-align: middle;
+}
+
+.account li {
+    display: inline-block;
+    margin-left: 5px;  
+    vertical-align: middle;
+}
+
+.account li a {
+    font-family: Telegrafico, serif;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.account li :hover {
+    color: #FFFF00;
+    /*color: #D8D8D8;*/
+}
+
+.cart {
+    display: inline-block;
+    width: 41px;
+    height: 43px;
+    vertical-align: middle;
+    margin-top: -5px;
+    background: url(img/cart.png) no-repeat;  
+}
+
+/*Header-middle*/
+
+.header-middle {   
+    background: url(img/header-middle-bg.png) repeat-x;
+    border-bottom: 4px solid #F1E9CF;
+    height: 66px;
+}
+
+/*menu*/
+
+.header-middle ul li {
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 32px;
+    margin-right: -5px;
+    vertical-align: middle;
+}
+
+.header-middle ul li.home {
+    display: inline-block;
+    margin-right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;     
+}
+
+.header-middle ul li.home a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(img/home.png) no-repeat; 
+}
+
+.header-middle a {
+    font-family: Dosis-Book, serif;
+    font-size: 16px;
+    color: #7D7253;
+    text-decoration: none;
+}
+
+.header-middle ul li:hover {
+    cursor: pointer;
+    background: url('img/sub-menu.png') repeat-x;
+}
+
+/*sub-menu*/
+
+.sub-menu {
+    display: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sub-menu li {
+    width: 100%;
+}
+
+.menu li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background: #FBF2D3;
+    top: 66px;
+    left: 0px;
+    z-index: 3;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 13px 16px 0px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 13px 16px 0px rgba(0,0,0,0.11);
+    box-shadow: 0px 13px 16px 0px rgba(0,0,0,0.11);
+}
+
+.header-middle ul.menu li ul.sub-menu li a{
+    display: inline-block;
+    font-size: 16px;
+    color: #777; 
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;  
+}
+
+.sub-menu a {
+    word-break: break-all;
+}
+
+.header-middle ul.menu li ul.sub-menu li {
+    margin-top: 10px;
+    padding: 0px;   
+}
+
+.header-middle ul.menu li ul.sub-menu li:last-child {
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+.header-middle ul.menu li ul.sub-menu li:hover {
+    background: #F54922;
+    border-radius: 20px;
+}
+
+.header-middle ul.menu li ul.sub-menu li:hover a{
+    color: #fff;
+}
+
+.header-middle ul.sub-menu li:hover{
+    background: none;
+}
+
+/*Header-bottom*/
+
+.header-bottom {
+    height: 60px;
+    background: #F9F9F9 repeat-x;
+    border-bottom: 5px solid #F4F4F4;
+}
+
+.header-bottom-text {
+    position: relative;
+    top: 20px;
+    font-family: Dosis-Book, serif;
+    font-size: 14px;
+    color: #a7a49c;
+    width: 300px;
+}
+
+li.header-bottom-element {
+    float: right;
+    margin-left: 10px;   
+}
+
+.social {
+   position: relative;
+   top: 10px;
+}
+
+.social-icon {
+   width: 15px;
+   height: 10px;
+}
+
+.header-bottom input, .header-bottom select {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    border-top: 1px solid #E0E0E0;
+    border-left: 1px solid #E0E0E0;
+    background-color: #fff;
+}
+
+.search {   
+    background: url(img/search.png) no-repeat 95% center; 
+   
+}
+
+.skype {  
+    background: url(img/skype.png) no-repeat center center; 
+}
+
+.twitter {
+    background: url(img/twitter.png) no-repeat center center; 
+}
+
+.facebook {
+    background: url(img/facebook.png) no-repeat center center; 
+}
+
+.rss {
+    background: url(img/rss.png) no-repeat center center; 
+}
+
+/******CONTENT******/
+
+/*SLIDER*/
+
+.slider {
+    margin-top: 21px;
+}
+
+.slide {
+    width: 940px;
+    background: url('img/slide.png') no-repeat ;
+    height: 355px;
+}
+
+.slider-title {
+    width: 940px;
+    background: url('img/slider-title.png') no-repeat ;
+    height: 72px;
+}
+
+.circles {
+    float: left;
+    margin-top: 28px;
+    margin-left: 27px;
+}
+
+.circle-big {
+    display: inline-block;    
+    width: 9px;
+    height: 9px;
+    margin-left: 6px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background: #fff;  
+}
+
+.circle-little {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    width: 5px;
+    height: 5px;
+    border: 1px solid #91D2D0;
+    border-radius: 10px;
+    background: #91D2D0;  
+}
+.purchase-button {
+    float: right; 
+    background: url('img/purchase.png') 100%;
+    margin-right: 25px;
+    margin-top: 16px;
+	width: 79px;
+	height: 32px;
+    border-radius: 3px;
+    border: solid 1px rgba(121,195,193,.52);    
+}
+
+.purchase-button:hover {
+    float: right; 
+    background: url('img/purchase-bought.png') 100%;
+    margin-right: 25px;
+    margin-top: 16px;
+	width: 79px;
+	height: 32px;
+    border-radius: 3px;
+    border: solid 1px rgba(230,109,75,.52);
+    cursor: pointer;
+}
+
+.purchase-text {
+    position:  relative;
+    top: 3px;  
+    font-size: 14px;
+    font-family: "Telegrafico";
+    color: rgb(255, 255, 255);
+    line-height: 1.714;
+    text-align: center;
+    text-shadow: -1px -1px 0px rgba(99, 185, 182, 0.77);
+}
+
+.slider-text {
+    float: right;
+    margin-top: 26px;
+    margin-right: 13px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/*MAIN*/
+
+.category {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.category .divider {
+    margin-left: 3px;
+    width: 840px;
+    height: 10px;
+    background: url('img/divider.png') repeat-x;
+    display: inline-block;
+}
+.category-text {
+    width: 90px;
+    font-family: Telegrafico, serif;
+    font-size: 18px; 
+    color: #747272;
+    display: inline-block;
+}
+
+.product {
+    position: relative;
+    width: 217px;
+    height: 267px;
+    border: 1px solid #B8B8B8; 
+    margin-right: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    padding-top: 8px;
+    padding-left: 7px;
+    background: #E7E7E7;
+    
+}
+
+.product:last-child {
+    margin-right: 0px;
+}
+
+.product img {
+    width: 207px;
+    height: 180px;
+    border: 2px solid #EEEEEE;
+    border-top: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;   
+}
+
+.product-title {
+    margin-top: 11px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    color: #494949;
+}
+
+.added-button {
+    margin-top: 20px;
+    width: 110px;
+    height: 30px;
+    background: url('img/add-button-grey.png') no-repeat;
+    float: left;
+}
+
+.price {
+    position: relative;
+    margin-top: 18px;
+    margin-right: 7px;
+    width: 59px;
+    height: 30px;
+    float: right;
+    background: url('img/price.png') no-repeat;
+}
+
+.price-text {
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    letter-spacing: 10px;
+    color: #636363;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+
+.price-text:first-letter {
+    color: #fff;   
+}
+
+.brands {
+    margin-top: 38px; 
+}
+
+.arrow-left {
+    position: relative;
+    top: 20px;
+    width: 35px;
+    height: 37px;
+    background: url('img/arrow-left.png') no-repeat;
+    float: left;
+}
+
+.arrow-right {
+    position: relative;
+    top: 20px;
+    width: 35px;
+    height: 37px;
+    background: url('img/arrow-right.png') no-repeat;
+    float: right;
+}
+
+.brands-list {
+    width: 727px;
+    height: 82px;
+    margin-left: 90px;
+    background: url('img/brands.png') no-repeat;
+    display: inline-block;
+}
+.product .product-image:hover .options {
+    display: inline-block;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(91, 91, 91);
+    background-image: -moz-linear-gradient( 90deg, rgb(206,206,206) 1%, rgb(220,220,220) 46%, rgb(234,234,234) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(206,206,206) 1%, rgb(220,220,220) 46%, rgb(234,234,234) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(206,206,206) 1%, rgb(220,220,220) 46%, rgb(234,234,234) 100%);  
+    left: 44px;
+    top: 55px;
+    width: 137px;
+    height: 34px;
+    z-index: 150;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.product .product-image:hover .options.options-two {
+   top: 110px; 
+}
+
+.options {
+    display: none;
+}
+
+.options:hover p{
+    color: #DB4F2C;
+}
+
+.options p {
+    font-family: "Myriad Pro";
+	font-size: 14px;
+	color: #494949;
+    margin-top: 10px;
+    margin-left: 25px;
+	text-shadow: 1px 1px rgba(255,255,255,.44);
+}
+
+.add-button {
+    float: left;
+    border-radius: 3px;
+    border: 1px solid #BE5C40;
+    background-image: -moz-linear-gradient( 90deg, rgb(232,70,33) 0%, rgb(253,95,55) 86%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(232,70,33) 0%, rgb(253,95,55) 86%);
+    background-image: -ms-linear-gradient( 90deg, rgb(232,70,33) 0%, rgb(253,95,55) 86%);
+    margin-top: 20px;
+    width: 109px;
+    height: 28px;
+}
+
+.add-button:hover {
+    float: left;
+    border-radius: 3px;
+    border: 1px solid #868686;
+    background-image: -moz-linear-gradient( 90deg, rgb(169,169,169) 13%, rgb(135,135,135) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(169,169,169) 13%, rgb(135,135,135) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(169,169,169) 13%, rgb(135,135,135) 100%); 
+    margin-top: 20px;
+    width: 109px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.add-button-text {
+    position: relative;
+    top: 8px;
+    left: 13px;
+    font-family: TerminalDosis-Regular, serif;
+    text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.18);
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.product .product-image:hover::after{
+    background: url('img/grey-mask.png') ;
+    opacity: 0.8;
+    content: "";
+    display: block;
+    height: 180px;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    width: 207px;
+}
+
+.product-image {
+    display: inline-block;
+    width: 207px;
+    height: 180px;
+}
+
+.pagination {
+    margin-top: 41px;
+}
+
+.pagination li {
+    display: inline-block;
+    background: url('img/page.png') no-repeat;
+    width: 33px;
+    height: 30px;
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.pagination li:hover {
+    display: inline-block;
+    background: url('img/page-hover.png') no-repeat;
+    width: 33px;
+    height: 30px;
+}
+
+.pagination li:hover p{
+    color: #fff;
+}
+
+.pagination li p {
+    display: inline-block;
+    font-family: TerminalDosis-Regular, serif;
+	font-size: 15px;
+	color: #545454;
+	text-shadow: 1px 1px rgba(255,255,255,.55);
+    text-align: center;
+    margin-top: 7px;
+    margin-left: 13px;
+        
+}
+
+.pagination li:first-child p, .pagination li:last-child p{
+    margin-top: 6px;
+}
+
+/******FOOTER******/
+
+/*TOP*/
+
+.footer-top {
+    background: url("img/footer-bg.png") repeat;
+    border-bottom: solid 5px #D4CCB0;
+}
+
+.sub-footer {
+    display: inline-block;
+    width: 300px;
+    padding-top: 25px;
+    padding-left: 2px;
+    margin-right: 7px;
+    margin-bottom: 32px;
+}
+
+.sub-footer-text {
+    margin-left: 25px;
+}
+
+.sub-footer-image-light {
+    float: left;
+    width: 18px;
+    height: 25px;
+    background: url(img/light-bulb.png) no-repeat;
+}
+
+.sub-footer-image-bolt {
+    float: left;
+    width: 19px;
+    height: 28px;
+    background: url(img/bolt.png) no-repeat;
+}
+
+.sub-footer-image-power {
+    margin-top: 3px;
+    float: left;
+    width: 20px;
+    height: 23px;
+    background: url(img/power.png) no-repeat;
+}
+
+.footer-top .sub-footer-title {
+    font-family: Telegrafico, serif; 
+    font-size: 18px;
+    color: #747272;
+}
+
+.footer-top .sub-footer-content {
+    margin-top: 15px;
+    font-family: Dosis-Book, serif; 
+    font-size: 14px;
+    color: #7D7253;
+    line-height: 1.5em;
+}
+
+/*BOTTOM*/
+
+.footer-bottom {
+    background: url("img/footer-bg-bottom.png") repeat;
+    padding-top: 23px;
+    padding-bottom: 24px;
+    border-bottom:  5px solid #5C5C5C;
+}
+
+.footer-bottom-element {
+    display: inline-block;
+    width: 165px;  
+    margin-right: 15px;
+    vertical-align: top;
+    
+}
+
+.footer-bottom .sub-footer-title {
+    font-family: Telegrafico, serif; 
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom .sub-footer-content {
+    margin-top: 15px;
+    font-family: Dosis-Book, serif; 
+    font-size: 14px;
+    color: #C9C9C9;
+    line-height: 1.5em;
+    text-decoration: none;
+    
+}
+
+a.sub-footer-content:hover {
+    color: #fff;
+}
+
+.copyrithing {
+    background: url(img/copyrighting.png) repeat-x;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.rights {
+    font-family: Telegrafico, serif; 
+    font-size: 14px;
+    color: #848484;
+}

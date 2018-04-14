@@ -1,0 +1,203 @@
+@import "fonts";
+@import "vars";
+@import "normalize";
+@import "global";
+@import "flex";
+@import "jquery.mCustomScrollbar";
+@import "media";
+.wrapper {
+	width: 93%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.content {
+	min-height: calc(100vh - 75px);
+}
+
+header {
+	margin-top: 20px;
+	.profiles {
+		margin-top: 5px;
+	}
+}
+
+.header-content {
+	margin-bottom: 10px;
+}
+
+.name {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 2.5em;
+	font-weight: 400;
+	color: #455463;
+	cursor: pointer;
+}
+
+.specialization {
+	font-family: 'Marvel', sans-serif;
+	font-size: 1.5em;
+	color: #808080;
+}
+
+.skills {
+	font-family: 'Marvel', sans-serif;
+	font-size: 1.5em;
+	font-weight: 200;
+	color: #808080;
+	span {
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-size: 1.4em;
+		color: #455463;
+	}
+}
+
+.social-icon {
+	width: 32px;
+	height: 32px;
+	margin-right: 5px;
+	fill: #045546;
+	&:hover {
+		fill: #02CBC9;
+	}
+}
+
+.works {
+	margin-top: 25px;
+	margin-bottom: 35px;
+	.section-title {
+		margin-bottom: 25px;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-size: 2.1rem;
+		font-weight: 400;
+		color: #455463;
+	}
+	.work {
+		width: 31%;
+		margin-left: 1.165%;
+		margin-right: 1.165%;
+		margin-bottom: 50px;
+		position: relative;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&:hover {
+			.title {
+				color: #2CBC99;
+			}
+			.tags {
+				color: #808080;
+			}
+		}
+	}
+	.site-description {
+		width: 45%;
+		font-family: 'Open Sans', sans-serif;
+		&-title {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.8rem;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: #00BCD4;
+		}
+		&-text {
+			font-family: 'Open Sans', sans-serif;
+			margin-top: 20px;
+			font-size: 1.0rem;
+			font-weight: 100;
+			line-height: 1.7rem;
+		}
+	}
+	.site-screen {
+		width: 45%;
+		margin-right: 5%;
+	}
+	.site-img {
+		height: 500px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.title,
+.tags {
+	font-family: 'Marvel', sans-serif;
+	color: #222C37;
+}
+
+.title {
+	font-size: 1.3rem;
+	font-weight: 700;
+	margin-top: 5px;
+	text-transform: uppercase;
+}
+
+.tags {
+	margin-top: 10px;
+}
+
+.buttons {
+	a {
+		margin-right: 15px;
+	}
+}
+
+.button {
+	margin-top: 30px;
+	font-size: 1.0rem;
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	background: #2CBC99;
+	border: 0px solid #ffffff;
+	padding: 10px 50px;
+	cursor: pointer;
+	&:hover {
+		background-color: #26a69a;
+	}
+}
+
+.divider {
+	padding: 1px;
+	background: #80E6E6 repeat-x;
+}
+
+.version-switcher {
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 55px;
+	margin-bottom: 55px;
+}
+
+.version {
+	width: 76px;
+	height: 76px;
+	margin-right: 5px;
+	fill: #808080;
+	cursor: pointer;
+	&:hover {
+		fill: #2CBC99;
+	}
+	&:last-child {
+		margin-right: 0px;
+	}
+}
+
+footer {
+	height: 75px;
+}
+
+.footer-content {
+	padding: 20px 0px;
+	.profiles {
+		margin-top: 0px;
+	}
+}
+
+.copyright {
+	font-family: 'Marvel', sans-serif;
+	color: #455463;
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
