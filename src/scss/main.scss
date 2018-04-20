@@ -17,7 +17,8 @@
 
 header {
 	margin-top: 20px;
-	.profiles {
+	.profiles,
+	.profiles-main {
 		margin-top: 5px;
 	}
 }
@@ -93,7 +94,6 @@ header {
 	}
 	.site-description {
 		width: 45%;
-		font-family: 'Open Sans', sans-serif;
 		&-title {
 			font-family: 'Open Sans', sans-serif;
 			font-size: 1.8rem;
@@ -190,7 +190,8 @@ footer {
 
 .footer-content {
 	padding: 20px 0px;
-	.profiles {
+	.profiles,
+	.profiles-main {
 		margin-top: 0px;
 	}
 }
