@@ -70,13 +70,11 @@ gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
 
 gulp.task('svg', function () {
 	return gulp.src('src/img/icons/*.svg')
-		// minify svg
 		.pipe(svgmin({
 			js2svg: {
 				pretty: true
 			}
 		}))
-		// remove all fill, style and stroke declarations in out shapes
 		.pipe(cheerio({
 			run: function ($) {
 				$('[fill]').removeAttr('fill');
@@ -87,9 +85,7 @@ gulp.task('svg', function () {
 				xmlMode: true
 			}
 		}))
-		// cheerio plugin create unnecessary string '&gt;', so replace it.
 		.pipe(replace('&gt;', '>'))
-		// build svg sprite
 		.pipe(svgSprite({
 			mode: {
 				symbol: {
@@ -102,7 +98,7 @@ gulp.task('svg', function () {
 
 gulp.task('imagemin', function () {
 	return gulp.src('src/img/**/*')
-		// .pipe(cache(imagemin())) // Cache Images
+		// .pipe(cache(imagemin()))
 		.pipe(imagemin())
 		.pipe(gulp.dest('dist/img'));
 });
@@ -112,19 +108,23 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function () {
 	var buildFiles = gulp.src([
 		'src/*.html',
 		'src/.htaccess',
-		]).pipe(gulp.dest('dist'));
+		]).pipe(gulp.dest(''));
+
+	var buildFiles = gulp.src([
+		'src/works/**',
+		]).pipe(gulp.dest('works'));
 
 	var buildCss = gulp.src([
 		'src/css/main.min.css',
-		]).pipe(gulp.dest('dist/css'));
+		]).pipe(gulp.dest('css'));
 
 	var buildJs = gulp.src([
 		'src/js/scripts.min.js',
-		]).pipe(gulp.dest('dist/js'));
+		]).pipe(gulp.dest('js'));
 
 	var buildFonts = gulp.src([
 		'src/fonts/**/*',
-		]).pipe(gulp.dest('dist/fonts'));
+		]).pipe(gulp.dest('fonts'));
 
 });
 
