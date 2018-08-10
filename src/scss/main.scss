@@ -15,51 +15,52 @@
 	min-height: calc(100vh - 75px);
 }
 
+.profiles,
+.profiles-main {
+	margin-top: 5px;
+	a {
+		.social-icon {
+			width: 32px;
+			height: 32px;
+			margin-right: 5px;
+			fill: #045546;
+			&:hover {
+				fill: #02CBC9;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
 header {
 	margin-top: 20px;
-	.profiles,
-	.profiles-main {
-		margin-top: 5px;
-	}
-}
-
-.header-content {
-	margin-bottom: 10px;
-}
-
-.name {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 2.5em;
-	font-weight: 400;
-	color: #455463;
-	cursor: pointer;
-}
-
-.specialization {
-	font-family: 'Marvel', sans-serif;
-	font-size: 1.5em;
-	color: #808080;
-}
-
-.skills {
-	font-family: 'Marvel', sans-serif;
-	font-size: 1.5em;
-	font-weight: 200;
-	color: #808080;
-	span {
-		font-family: 'Yanone Kaffeesatz', sans-serif;
-		font-size: 1.4em;
-		color: #455463;
-	}
-}
-
-.social-icon {
-	width: 32px;
-	height: 32px;
-	margin-right: 5px;
-	fill: #045546;
-	&:hover {
-		fill: #02CBC9;
+	.header-content {
+		margin-bottom: 10px;
+		.name {
+			font-family: 'Yanone Kaffeesatz', sans-serif;
+			font-size: 2.5em;
+			font-weight: 400;
+			color: #455463;
+			cursor: pointer;
+		}
+		.specialization {
+			font-family: 'Marvel', sans-serif;
+			font-size: 1.5em;
+			color: #808080;
+		}
+		.skills {
+			font-family: 'Marvel', sans-serif;
+			font-size: 1.5em;
+			font-weight: 200;
+			color: #808080;
+			span {
+				font-family: 'Yanone Kaffeesatz', sans-serif;
+				font-size: 1.4em;
+				color: #455463;
+			}
+		}
 	}
 }
 
@@ -186,19 +187,17 @@ header {
 
 footer {
 	height: 75px;
-}
-
-.footer-content {
-	padding: 20px 0px;
-	.profiles,
-	.profiles-main {
-		margin-top: 0px;
+	.footer-content {
+		padding: 20px 0px;
+		.profiles,
+		.profiles-main {
+			margin-top: 0px;
+		}
+		.copyright {
+			font-family: 'Marvel', sans-serif;
+			color: #455463;
+			font-size: 1.3em;
+			line-height: 1.5em;
+		}
 	}
-}
-
-.copyright {
-	font-family: 'Marvel', sans-serif;
-	color: #455463;
-	font-size: 1.3em;
-	line-height: 1.5em;
 }
