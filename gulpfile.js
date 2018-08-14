@@ -100,7 +100,7 @@ gulp.task('imagemin', function () {
 	return gulp.src('src/img/**/*')
 		// .pipe(cache(imagemin()))
 		.pipe(imagemin())
-		.pipe(gulp.dest('dist/img'));
+		.pipe(gulp.dest('img'));
 });
 
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function () {
