@@ -8,7 +8,12 @@
 	@media only screen and (max-width: 900px) {
 		.content {
 			.works {
-				margin: 0;
+				.section-title {
+					margin-top: 50px;
+					margin-bottom: 50px;
+					text-align: center;
+					font-size: 58px;
+				}
 				.work {
 					width: 90%;
 					margin: 0 auto;
@@ -17,11 +22,12 @@
 						text-align: center;
 					}
 					.title {
-						font-size: 1.8rem;
+						margin-top: 50px;
+						font-size: 2.8rem;
 					}
 					.tags {
 						margin-bottom: 35px;
-						font-size: 1.3rem;
+						font-size: 1.6rem;
 					}
 				}
 			}
@@ -107,15 +113,23 @@
 	@media only screen and (max-width: 480px) {
 		.wrapper {
 			.works {
-				.site-description {
-					&-title {
-						font-size: 2.2em;
-					}
-					&-text {
-						font-size: 1.0em;
+				.work {
+					.title {
+						font-size: 2.0rem;
 					}
 					.tags {
-						font-size: 0.9em;
+						font-size: 1.2rem;
+					}
+					.site-description {
+						&-title {
+							font-size: 2.2em;
+						}
+						&-text {
+							font-size: 1.0em;
+						}
+						.tags {
+							font-size: 0.9em;
+						}
 					}
 				}
 			}

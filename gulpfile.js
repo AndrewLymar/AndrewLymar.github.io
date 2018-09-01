@@ -93,7 +93,8 @@ gulp.task('svg', function () {
 				}
 			}
 		}))
-		.pipe(gulp.dest('src/img/icons/'));
+		.pipe(gulp.dest('src/img/icons/'))
+		.pipe(gulp.dest('src/works/img/icons/'));
 });
 
 gulp.task('imagemin', function () {
