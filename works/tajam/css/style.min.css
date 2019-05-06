@@ -1366,9 +1366,7 @@ h2 {
   text-transform: uppercase;
 }
 
-.button,
-.button-dark,
-.button-light {
+.button {
   width: 140px;
   height: 40px;
   border: 1px solid #00e0d0;
@@ -1383,13 +1381,13 @@ h2 {
   cursor: pointer;
 }
 
-.button-dark:hover {
+.button--dark:hover {
   border: 1px solid #fff;
   background: #fff;
   color: #000;
 }
 
-.button-light:hover {
+.button--light:hover {
   background: #00e0d0;
   color: #fff;
 }
@@ -1399,36 +1397,39 @@ section {
   padding-bottom: 70px;
 }
 
-.title-text {
+.section-text {
   text-align: center;
   font-family: 'Playfair Display',serif;
 }
 
-.title-text h2 {
+.section-text__title {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 1.1px;
   text-transform: uppercase;
 }
 
-.title-text p {
+.section-text__title--dark {
+  color: #413d4b;
+}
+
+.section-text__title--light {
+  color: #fff;
+}
+
+.section-text__description {
   margin-top: 16px;
   margin-bottom: 18px;
   font-size: 14px;
   letter-spacing: 1.05px;
 }
 
-.title-text-dark h2 {
-  color: #413d4b;
-}
-
-.title-text-dark p {
+.section-text__description--dark {
   opacity: .75;
   color: #2f2d35;
 }
 
-.title-text-light h2,
-.title-text-light p {
+.section-text__description--light {
   color: #fff;
 }
 
@@ -1452,7 +1453,7 @@ section {
   margin: 0;
 }
 
-.header-menu {
+.menu {
   position: fixed;
   width: 100%;
   -webkit-transition: all .4s ease;
@@ -1460,15 +1461,15 @@ section {
   transition: all .4s ease;
 }
 
-.header-menu ul li {
+.menu__item {
   margin-right: 25px;
 }
 
-.header-menu ul li:last-child {
+.menu__item:last-child {
   margin-right: 0;
 }
 
-.header-menu ul li a {
+.menu__link {
   font-family: Roboto,sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -1480,11 +1481,11 @@ section {
   transition: all .5s;
 }
 
-.header-menu ul li a:hover {
+.menu__link:hover {
   color: #00e0d0;
 }
 
-.header-menu .menu-icon {
+.menu__icon {
   display: none;
   width: 32px;
   height: 32px;
@@ -1508,30 +1509,30 @@ section {
   color: #fff;
 }
 
-.banner .banner-slider h1 {
+.banner__slider h1 {
   font-family: 'Playfair Display',serif;
   font-weight: 900;
 }
 
-.banner .banner-slider .title-decoration {
+.banner__slider .title-decoration {
   width: 50px;
   margin-top: 20px;
   margin-bottom: 30px;
   border-top: 1px solid #00e0d0;
 }
 
-.banner .banner-slider p {
+.banner__slider p {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
 }
 
-.banner .banner-slider .slick-list {
+.banner__slider .slick-list {
   max-width: 100%;
 }
 
-.banner .banner-slider .slick-list .slick-track .slick-slide {
+.banner__slider .slick-list .slick-track .slick-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1545,18 +1546,16 @@ section {
   max-width: 100%;
 }
 
-.banner .banner-slider .slick-list .slick-track .slick-slide p {
+.banner__slider .slick-list .slick-track .slick-slide p {
   max-width: 100%;
 }
 
-.banner .banner-slider .button,
-.banner .banner-slider .button-dark,
-.banner .banner-slider .button-light {
+.banner__slider .button {
   margin-top: 50px;
   margin-bottom: 128px;
 }
 
-.banner .banner-slider .my-dots {
+.banner__slider .my-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1565,15 +1564,15 @@ section {
   justify-content: center;
 }
 
-.banner .banner-slider .my-dots li {
+.banner__slider .my-dots li {
   margin-right: 5px;
 }
 
-.banner .banner-slider .my-dots li:last-child {
+.banner__slider .my-dots li:last-child {
   margin-right: 0;
 }
 
-.banner .banner-slider .my-dots .dot {
+.banner__slider .my-dots .dot {
   display: block;
   width: 10px;
   height: 10px;
@@ -1583,19 +1582,19 @@ section {
   cursor: pointer;
 }
 
-.banner .banner-slider .my-dots .dot:hover {
+.banner__slider .my-dots .dot:hover {
   background: #00e0d0;
   border: none;
 }
 
-.banner .banner-slider .my-dots .dot .string {
+.banner__slider .my-dots .dot .string {
   position: absolute;
   left: -99999px;
   line-height: 0;
   opacity: 0;
 }
 
-.banner .banner-slider .my-dots .slick-active .dot {
+.banner__slider .my-dots .slick-active .dot {
   background: #00e0d0;
   border: none;
 }
@@ -1622,17 +1621,15 @@ section {
   line-height: 22px;
 }
 
-.s-about .button,
-.s-about .button-dark,
-.s-about .button-light {
+.s-about .button {
   margin-top: 15px;
 }
 
-.s-about .video-about-container {
+.s-about .video {
   position: relative;
 }
 
-.s-about .video-about-container .overlay {
+.s-about .video__overlay {
   position: absolute;
   width: 100%;
   height: 99%;
@@ -1642,13 +1639,13 @@ section {
   z-index: 4;
 }
 
-.s-about .video-about-container .overlay .btn-video {
+.s-about .video__button {
   width: 100px;
   height: 100px;
   cursor: pointer;
 }
 
-.s-about .video-about-container .overlay h3 {
+.s-about .video__title {
   margin-top: 34px;
   font-family: Roboto,sans-serif;
   font-size: 16px;
@@ -1657,7 +1654,7 @@ section {
   color: #fff;
 }
 
-.s-about .video-about-container .video-about {
+.s-about .video__html5 {
   width: 100%;
 }
 
@@ -1724,38 +1721,38 @@ section {
   border-top: 2px solid #655c81;
 }
 
-.s-team .employees-cards {
+.s-team .employees {
   margin-top: 25px;
 }
 
-.s-team .employees-cards .employee-card {
+.s-team .employees .employee-card {
   -ms-flex-preferred-size: 220px;
   flex-basis: 220px;
 }
 
-.s-team .employees-cards .employee-card:nth-child(1) .employee-img {
+.s-team .employees .employee-card:nth-child(1) .employee-card__img {
   background-image: url("../img/employee1.jpg");
 }
 
-.s-team .employees-cards .employee-card:nth-child(2) .employee-img {
+.s-team .employees .employee-card:nth-child(2) .employee-card__img {
   background-image: url("../img/employee2.jpg");
 }
 
-.s-team .employees-cards .employee-card:nth-child(3) .employee-img {
+.s-team .employees .employee-card:nth-child(3) .employee-card__img {
   background-image: url("../img/employee3.jpg");
 }
 
-.s-team .employees-cards .employee-card:nth-child(4) .employee-img {
+.s-team .employees .employee-card:nth-child(4) .employee-card__img {
   background-image: url("../img/employee4.jpg");
 }
 
-.s-team .employees-cards .employee-card .employee-img {
+.s-team .employees .employee-card__img {
   height: 230px;
   background-position: center;
   background-size: cover;
 }
 
-.s-team .employees-cards .employee-card .employee-text {
+.s-team .employees .employee-card__text {
   padding: 23px 10px 25px 10px;
   border: 1px solid #e1e1e1;
   border-top: 1px solid rgba(225,225,225,.5);
@@ -1764,13 +1761,13 @@ section {
   z-index: 10;
 }
 
-.s-team .employees-cards .employee-card .employee-text-name {
+.s-team .employees .employee-card__name {
   font-size: 14px;
   font-weight: 900;
   letter-spacing: .7px;
 }
 
-.s-team .employees-cards .employee-card .employee-text-position {
+.s-team .employees .employee-card__position {
   font-size: 13px;
   font-weight: 300;
   opacity: .7;
@@ -2100,7 +2097,7 @@ section {
   border: 1px solid #e6e6e6;
 }
 
-footer {
+.footer {
   padding-top: 70px;
   padding-bottom: 70px;
   background: url("../img/footer-bg.png") no-repeat;
@@ -2108,8 +2105,31 @@ footer {
   color: #fff;
 }
 
-footer .contacts h3,
-footer .socials h3 {
+.footer__bottom {
+  margin-top: 70px;
+}
+
+.footer-about {
+  -ms-flex-preferred-size: 285px;
+  flex-basis: 285px;
+}
+
+.footer-about__text {
+  margin-top: 20px;
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: .35px;
+  color: #fff;
+}
+
+.footer-contacts {
+  -ms-flex-preferred-size: 275px;
+  flex-basis: 275px;
+}
+
+.footer-contacts__title {
   margin-top: 10px;
   font-family: Roboto,sans-serif;
   font-size: 15px;
@@ -2120,8 +2140,8 @@ footer .socials h3 {
   color: #fff;
 }
 
-footer .contacts span,
-footer .socials span {
+.footer-contacts__geo span,
+.footer-contacts__tel span {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2129,80 +2149,37 @@ footer .socials span {
   letter-spacing: .35px;
 }
 
-footer .about {
-  -ms-flex-preferred-size: 285px;
-  flex-basis: 285px;
-}
-
-footer .about p {
-  margin-top: 20px;
-  font-family: Roboto,sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 26px;
-  letter-spacing: .35px;
-  color: #fff;
-}
-
-footer .contacts {
-  -ms-flex-preferred-size: 275px;
-  flex-basis: 275px;
-}
-
-footer .contacts svg {
+.footer-contacts__geo svg,
+.footer-contacts__tel svg {
   margin-right: 15px;
 }
 
-footer .contacts .geo {
+.footer-contacts__geo {
   margin-top: 40px;
 }
 
-footer .contacts .tel {
+.footer-contacts__tel {
   margin-top: 27px;
 }
 
-footer .socials {
-  -ms-flex-preferred-size: 320px;
-  flex-basis: 320px;
+.footer-socials__title {
+  margin-top: 10px;
+  font-family: Roboto,sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: .75px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-footer .socials-icons {
-  margin-top: 27px;
-}
-
-footer .socials-icons li {
-  margin-right: 8px;
-}
-
-footer .socials-icons li a,
-footer .socials-icons li svg {
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-}
-
-footer .socials-icons li a {
-  width: 35px;
-  height: 35px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-}
-
-footer .socials-icons li a:hover {
-  border: 1px solid #00e0d0;
-}
-
-footer .socials-icons li a:hover svg {
-  fill: #00e0d0;
-}
-
-footer .socials form {
+.footer-socials__form {
   width: 100%;
   margin-top: 40px;
 }
 
-footer .socials form input,
-footer .socials form input::-webkit-input-placeholder {
+.footer-socials__input,
+.footer-socials__input::-webkit-input-placeholder {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2211,8 +2188,8 @@ footer .socials form input::-webkit-input-placeholder {
   color: #fff;
 }
 
-footer .socials form input,
-footer .socials form input:-ms-input-placeholder {
+.footer-socials__input,
+.footer-socials__input:-ms-input-placeholder {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2221,8 +2198,8 @@ footer .socials form input:-ms-input-placeholder {
   color: #fff;
 }
 
-footer .socials form input,
-footer .socials form input::-ms-input-placeholder {
+.footer-socials__input,
+.footer-socials__input::-ms-input-placeholder {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2231,8 +2208,8 @@ footer .socials form input::-ms-input-placeholder {
   color: #fff;
 }
 
-footer .socials form input,
-footer .socials form input::placeholder {
+.footer-socials__input,
+.footer-socials__input::placeholder {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2241,7 +2218,7 @@ footer .socials form input::placeholder {
   color: #fff;
 }
 
-footer .socials form input {
+.footer-socials__input {
   width: 210px;
   height: 45px;
   margin-right: 10px;
@@ -2252,7 +2229,7 @@ footer .socials form input {
   opacity: .75;
 }
 
-footer .socials form button {
+.footer-socials__button {
   width: 70px;
   height: 45px;
   border: 1px solid #fff;
@@ -2261,24 +2238,56 @@ footer .socials form button {
   cursor: pointer;
 }
 
-footer .socials form button img {
+.footer-socials__button img {
   width: 25px;
   height: 25px;
 }
 
-footer .footer-bottom {
+.footer-socials__list {
+  margin-top: 27px;
+}
+
+.footer-socials__item {
+  margin-right: 8px;
+}
+
+.footer-socials__link {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.footer-socials__link:hover {
+  border: 1px solid #00e0d0;
+}
+
+.footer-socials__link:hover svg {
+  fill: #00e0d0;
+}
+
+.footer-socials svg {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.footer-bottom {
   margin-top: 70px;
 }
 
-footer .footer-bottom ul li {
+.footer-bottom__item {
   margin-right: 32px;
 }
 
-footer .footer-bottom ul li:last-child {
+.footer-bottom__item:last-child {
   margin-right: 0;
 }
 
-footer .footer-bottom ul li a {
+.footer-bottom__link {
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: all .5s;
@@ -2286,11 +2295,11 @@ footer .footer-bottom ul li a {
   transition: all .5s;
 }
 
-footer .footer-bottom ul li a:hover {
+.footer-bottom__link:hover {
   color: #00e0d0;
 }
 
-footer .footer-bottom .copyright {
+.footer-bottom__copyright {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2309,21 +2318,21 @@ footer .footer-bottom .copyright {
 }
 
 @media only screen and (max-width:768px) {
-  header .header-menu {
+  .menu {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     background: #30235f;
     z-index: 100;
   }
 
-  header .header-menu .container {
+  .menu .container {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     padding-top: 15px;
     padding-bottom: 15px;
   }
 
-  header .header-menu ul {
+  .menu__list {
     display: none;
     position: absolute;
     top: 65px;
@@ -2337,16 +2346,16 @@ footer .footer-bottom .copyright {
     background: #30235f;
   }
 
-  header .header-menu ul li {
+  .menu__item {
     margin: 0;
     margin-top: 50px;
   }
 
-  header .header-menu ul li a {
+  .menu__link {
     font-size: 20px;
   }
 
-  header .header-menu .menu-icon {
+  .menu__icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2356,16 +2365,16 @@ footer .footer-bottom .copyright {
     margin-top: 50px;
   }
 
-  .s-about .video-about-container .overlay {
+  .s-about .video__overlay {
     height: 97%;
   }
 
-  .s-about .video-about-container .overlay .btn-video {
+  .s-about .video__button {
     width: 30px;
     height: 30px;
   }
 
-  .s-about .video-about-container .overlay h3 {
+  .s-about .video__title {
     width: 80%;
     margin-top: 24px;
     font-size: 10px;
@@ -2402,7 +2411,7 @@ footer .footer-bottom .copyright {
     margin-top: 50px;
   }
 
-  footer .socials form button {
+  .footer-socials__button {
     margin-top: 25px;
   }
 }
@@ -2416,21 +2425,25 @@ footer .footer-bottom .copyright {
     margin-top: 25px;
   }
 
-  footer .contacts h3,
-  footer .socials h3 {
+  .footer-contacts__title {
     font-size: 20px;
     margin-top: 25px;
   }
 
-  footer .socials form button {
+  .footer-socials__title {
+    font-size: 20px;
     margin-top: 25px;
   }
 
-  footer .footer-bottom ul {
+  .footer-socials__button {
+    margin-top: 25px;
+  }
+
+  .footer-bottom__list {
     width: 100%;
   }
 
-  footer .footer-bottom ul li {
+  .footer-bottom__item {
     margin: 0;
   }
 }
