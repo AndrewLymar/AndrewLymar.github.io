@@ -1609,27 +1609,27 @@ section {
   padding-bottom: 70px;
 }
 
-.s-about h2 {
+.about__title {
   font-family: 'Playfair Display',serif;
   font-size: 22px;
 }
 
-.s-about p {
+.about__text {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
 }
 
-.s-about .button {
+.about__button {
   margin-top: 15px;
 }
 
-.s-about .video {
+.video {
   position: relative;
 }
 
-.s-about .video__overlay {
+.video__overlay {
   position: absolute;
   width: 100%;
   height: 99%;
@@ -1639,13 +1639,13 @@ section {
   z-index: 4;
 }
 
-.s-about .video__button {
+.video__button {
   width: 100px;
   height: 100px;
   cursor: pointer;
 }
 
-.s-about .video__title {
+.video__title {
   margin-top: 34px;
   font-family: Roboto,sans-serif;
   font-size: 16px;
@@ -1654,7 +1654,7 @@ section {
   color: #fff;
 }
 
-.s-about .video__html5 {
+.video__html5 {
   width: 100%;
 }
 
@@ -1667,23 +1667,23 @@ section {
   margin-top: 50px;
 }
 
-.s-expertise .expertise-items .expertise-item {
+.s-expertise .expertise-item {
   height: 260px;
   padding: 35px;
   border-right: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
 }
 
-.s-expertise .expertise-items .expertise-item:nth-child(3),
-.s-expertise .expertise-items .expertise-item:nth-child(6) {
+.s-expertise .expertise-item:nth-child(3),
+.s-expertise .expertise-item:nth-child(6) {
   border-right: 0;
 }
 
-.s-expertise .expertise-items .expertise-item:nth-last-child(-n+3) {
+.s-expertise .expertise-item:nth-last-child(-n+3) {
   border-bottom: 0;
 }
 
-.s-expertise .expertise-items .expertise-item-text {
+.s-expertise .expertise-item__text {
   max-width: 100%;
   margin-top: auto;
   margin-top: 30px;
@@ -1691,7 +1691,7 @@ section {
   font-family: Roboto,sans-serif;
 }
 
-.s-expertise .expertise-items .expertise-item-text h2 {
+.s-expertise .expertise-item__title {
   font-size: 14px;
   font-weight: 900;
   letter-spacing: .7px;
@@ -1699,7 +1699,7 @@ section {
   color: #413d4b;
 }
 
-.s-expertise .expertise-items .expertise-item-text p {
+.s-expertise .expertise-item__description {
   margin: 0;
   margin-top: 25px;
   font-size: 14px;
@@ -2004,7 +2004,12 @@ section {
   opacity: 1;
 }
 
-.s-contact h3 {
+.contact {
+  -ms-flex-preferred-size: 460px;
+  flex-basis: 460px;
+}
+
+.contact__title {
   font-family: 'Playfair Display',serif;
   font-size: 22px;
   font-weight: 700;
@@ -2013,38 +2018,20 @@ section {
   color: #413d4b;
 }
 
-.s-contact .contact-form {
-  -ms-flex-preferred-size: 460px;
-  flex-basis: 460px;
-}
-
-.s-contact .brands {
-  -ms-flex-preferred-size: 390px;
-  flex-basis: 390px;
-}
-
-.s-contact .brands-images {
-  margin-top: 47px;
-}
-
-.s-contact .brands-images img {
-  margin-bottom: 45px;
-}
-
-.s-contact form {
+.contact__form {
   margin-top: 35px;
 }
 
-.s-contact form button,
-.s-contact form input,
-.s-contact form textarea {
+.contact__button,
+.contact__input,
+.contact__textarea {
   margin-top: 22px;
 }
 
-.s-contact form input,
-.s-contact form input::-webkit-input-placeholder,
-.s-contact form textarea,
-.s-contact form textarea::-webkit-input-placeholder {
+.contact__input,
+.contact__input::-webkit-input-placeholder,
+.contact__textarea,
+.contact__textarea::-webkit-input-placeholder {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2052,10 +2039,10 @@ section {
   color: #b3b2b7;
 }
 
-.s-contact form input,
-.s-contact form input:-ms-input-placeholder,
-.s-contact form textarea,
-.s-contact form textarea:-ms-input-placeholder {
+.contact__input,
+.contact__input:-ms-input-placeholder,
+.contact__textarea,
+.contact__textarea:-ms-input-placeholder {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2063,10 +2050,10 @@ section {
   color: #b3b2b7;
 }
 
-.s-contact form input,
-.s-contact form input::-ms-input-placeholder,
-.s-contact form textarea,
-.s-contact form textarea::-ms-input-placeholder {
+.contact__input,
+.contact__input::-ms-input-placeholder,
+.contact__textarea,
+.contact__textarea::-ms-input-placeholder {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2074,10 +2061,10 @@ section {
   color: #b3b2b7;
 }
 
-.s-contact form input,
-.s-contact form input::placeholder,
-.s-contact form textarea,
-.s-contact form textarea::placeholder {
+.contact__input,
+.contact__input::placeholder,
+.contact__textarea,
+.contact__textarea::placeholder {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2085,16 +2072,38 @@ section {
   color: #b3b2b7;
 }
 
-.s-contact form input {
+.contact__input {
   height: 45px;
   padding-left: 20px;
   padding-right: 20px;
   border: 1px solid #e6e6e6;
 }
 
-.s-contact form textarea {
+.contact__textarea {
   padding: 22px 20px;
   border: 1px solid #e6e6e6;
+}
+
+.brands {
+  -ms-flex-preferred-size: 390px;
+  flex-basis: 390px;
+}
+
+.brands__title {
+  font-family: 'Playfair Display',serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: #413d4b;
+}
+
+.brands__images {
+  margin-top: 47px;
+}
+
+.brands__image {
+  margin-bottom: 45px;
 }
 
 .footer {
