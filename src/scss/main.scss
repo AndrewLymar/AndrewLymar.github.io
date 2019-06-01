@@ -22,14 +22,25 @@
 		.social-icon {
 			width: 32px;
 			height: 32px;
-			margin-right: 5px;
+			margin-right: 7px;
 			fill: #045546;
-			&:hover {
-				fill: #02CBC9;
-			}
+		}
+		.profiles-text {
+			font-family: 'Yanone Kaffeesatz', sans-serif;
+			font-size: 20px;
+			line-height: 19px;
+			color: #045546
 		}
 		&:last-child {
 			margin-right: 0;
+		}
+		&:hover {
+			.profiles-text {
+				color: #02CBC9;
+			}
+			.social-icon {
+				fill: #02CBC9;
+			}
 		}
 	}
 }
