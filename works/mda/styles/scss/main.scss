@@ -1,0 +1,127 @@
+@import "vars";
+@import "fonts";
+@import "helpers";
+
+body {
+    font-family: $default-font;
+}
+
+.logo {
+    //font-family: 'Bungee Shade', cursive;
+    font-family: 'Monoton', cursive;
+    font-size: 48px;
+    line-height: 1.2em;
+    margin-right: 30px;
+
+    &--first-letter {
+        color: #FFFF00;
+    }
+
+    &--second-letter {
+        color: #B87EBB;
+    }
+
+    &--last-letter {
+        color: #99FF33;
+    }
+}
+
+.menu {
+    padding: 15px;
+    background-image: linear-gradient(to right, #00c1cf 0%, #b97ebb 50%, #00c1cf 100%);
+
+    &__list {
+        margin-left: 25px;
+    }
+
+    &__item {
+        margin-right: 25px;
+        color: #fff;
+    }
+
+    &__link {
+        font-family: 'Nunito', sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.4s ease;
+
+        &:hover {
+            color: #99FF33;
+        }
+    }
+
+}
+
+.banner__video-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    .video {
+        width: 100%;
+    }
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+
+    p {
+        font-size: 32px;
+        color: #9f3;
+    }
+}
+
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    //background: url("../../img/about-bg.jpg") no-repeat;
+    //background-size: cover;
+    //background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.about-text {
+    font-size: 48px;
+    color: #fff;
+
+
+    span {
+        margin-right: 55px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        color: #fff;
+        font-family: 'Monoton', cursive;
+
+        &:first-letter {
+            font-size: 58px;
+            color: #F398A9;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .first-word {
+        &:first-letter {
+            color: #FFFF00;
+        }
+    }
+
+    .second-word {
+        &:first-letter {
+            color: #B87EBB;
+        }
+    }
+
+    .last-word {
+        &:first-letter {
+            color: #99FF33;
+        }
+    }
+}
+
+@import "media";
