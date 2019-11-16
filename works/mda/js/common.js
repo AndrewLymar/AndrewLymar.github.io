@@ -1,5 +1,5 @@
 $(function () {
-    $('.banner__video').bgVideo({
+    $('.banner__video-wrappe').bgVideo({
         fullScreen: true
     });
     dynamicGradient();
