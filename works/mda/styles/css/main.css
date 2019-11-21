@@ -514,26 +514,141 @@
 body {
   font-family: sans-serif; }
 
+.img-container {
+  height: auto; }
+  .img-container img {
+    width: 100%; }
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .section__title {
+    margin-bottom: 50px;
+    font-size: 28px;
+    color: #EF4FB3; }
+
+.thumb-wrap {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  box-shadow: 0 0 30px #000; }
+  .thumb-wrap iframe,
+  .thumb-wrap object,
+  .thumb-wrap embed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+
+.menu-grid {
+  display: grid;
+  align-items: center;
+  grid-template-areas: "logo menu-left menu-right";
+  grid-auto-columns: auto 1fr 1fr; }
+  @media only screen and (max-width: 768px) {
+    .menu-grid {
+      grid-template-areas: "logo . ." "menu-left menu-left menu-left" "menu-right menu-right menu-right "; } }
+
+.menu-grid.mobile {
+  height: 100vh; }
+
+/*
 .logo {
+    //font-family: 'Bungee Shade', cursive;
+    margin-right: 30px;
+    font-family: 'Monoton', cursive;
+    font-size: 48px;
+    line-height: 1.2em;
+    grid-area: logo;
+    cursor: pointer;
+
+    &--first-letter {
+        color: #FFFF00;
+    }
+
+    &--second-letter {
+        color: #B87EBB;
+    }
+
+    &--last-letter {
+        color: #99FF33;
+    }
+
+    &--sub {
+        font-size: 22px;
+        text-transform: lowercase;
+        color: #fff;
+    }
+}
+*/
+.logo {
+  margin-top: 12px;
+  margin-right: 30px;
   font-family: 'Monoton', cursive;
   font-size: 48px;
-  line-height: 1.2em;
-  margin-right: 30px; }
-  .logo--first-letter {
-    color: #FFFF00; }
-  .logo--second-letter {
-    color: #B87EBB; }
-  .logo--last-letter {
-    color: #99FF33; }
+  line-height: 0;
+  color: #EF4FB3;
+  grid-area: logo;
+  cursor: pointer; }
+  .logo--sub {
+    align-self: flex-start;
+    margin-top: 32px;
+    font-size: 22px;
+    text-transform: lowercase;
+    color: #fff; }
+
+.menu-icon {
+  display: none;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  top: 18px;
+  right: 10%;
+  grid-area: menu-icon; }
+  @media only screen and (max-width: 768px) {
+    .menu-icon {
+      display: block; } }
 
 .menu {
-  padding: 15px;
-  background-image: linear-gradient(to right, #00c1cf 0%, #b97ebb 50%, #00c1cf 100%); }
+  position: fixed;
+  width: 100%;
+  padding: 25px;
+  background: #000;
+  z-index: 99999; }
+  .menu__left {
+    grid-area: menu-left;
+    justify-self: start; }
+    @media only screen and (max-width: 768px) {
+      .menu__left {
+        justify-self: center; } }
+  .menu__right {
+    grid-area: menu-right;
+    justify-self: end; }
+    @media only screen and (max-width: 768px) {
+      .menu__right {
+        margin-bottom: 30px;
+        justify-self: center; } }
   .menu__list {
-    margin-left: 25px; }
+    margin-left: 25px;
+    transition: all 0.4s ease; }
+    @media only screen and (max-width: 768px) {
+      .menu__list {
+        display: none;
+        margin-top: 30px;
+        margin-left: 0px; } }
   .menu__item {
     margin-right: 25px;
     color: #fff; }
+    @media only screen and (max-width: 768px) {
+      .menu__item {
+        margin-right: 0px;
+        margin-bottom: 20px; } }
+    .menu__item:last-child {
+      margin-right: 0; }
   .menu__link {
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
@@ -541,8 +656,11 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.4s ease; }
+    @media only screen and (max-width: 768px) {
+      .menu__link {
+        font-size: 16px; } }
     .menu__link:hover {
-      color: #99FF33; }
+      color: #EF4FB3; }
 
 .banner__video-wrapper {
   height: 100vh; }
@@ -550,47 +668,82 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+  .banner__video-wrapper .overlay {
+    position: absolute;
+    z-index: 1; }
+    .banner__video-wrapper .overlay p {
+      font-size: 32px;
+      color: #9f3; }
 
-.overlay {
-  margin-top: -40px;
-  position: absolute;
-  z-index: 1; }
-  .overlay p {
-    font-size: 32px;
-    color: #9f3; }
-
-.about {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); }
-
-.about-text {
+.banner__text {
   font-size: 48px;
   color: #fff; }
   @media only screen and (max-width: 992px) {
-    .about-text {
+    .banner__text {
       font-size: 40px; } }
-  .about-text--light {
+
+.banner__word {
+  margin-right: 55px;
+  font-family: 'Monoton', cursive;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #fff; }
+  .banner__word:first-letter {
+    font-size: 58px;
+    color: #F398A9; }
+    @media only screen and (max-width: 992px) {
+      .banner__word:first-letter {
+        font-size: 48px; } }
+  .banner__word:last-child {
+    margin-right: 0; }
+
+.banner__word--first-word:first-letter {
+  color: #FFFF00; }
+
+.banner__word--second-word:first-letter {
+  color: #B87EBB; }
+
+.banner__word--last-word:first-letter {
+  color: #99FF33; }
+
+.services {
+  background: #000; }
+  @media only screen and (max-width: 768px) {
+    .services__video {
+      margin-top: 50px; } }
+
+.about {
+  font-family: 'Montserrat', sans-serif;
+  background: #000; }
+  .about__text {
+    font-size: 18px;
+    line-height: 1.7em;
     color: #fff; }
-  .about-text--dark {
-    color: #000; }
-  .about-text span {
-    margin-right: 55px;
-    font-family: 'Monoton', cursive;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+
+.contacts {
+  background: #000; }
+
+.emo {
+  background: #000;
+  color: #EF4FB3 !important; }
+  .emo .about__title {
+    font-size: 38px; }
+  .emo .about__title,
+  .emo .about__text {
+    text-align: center;
+    color: #EF4FB3; }
+  .emo .about__text {
+    margin-top: 50px;
     color: #fff; }
-    .about-text span:first-letter {
-      font-size: 58px;
-      color: #F398A9; }
-      @media only screen and (max-width: 992px) {
-        .about-text span:first-letter {
-          font-size: 48px; } }
-    .about-text span:last-child {
-      margin-right: 0; }
-  .about-text .first-word:first-letter {
-    color: #FFFF00; }
-  .about-text .second-word:first-letter {
-    color: #B87EBB; }
-  .about-text .last-word:first-letter {
-    color: #99FF33; }
+
+.footer {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background: #000;
+  color: #fff; }
+
+.contacts__email, .contacts__telephone {
+  margin-top: 30px; }
+
+.copy {
+  margin-top: 150px; }

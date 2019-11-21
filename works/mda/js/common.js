@@ -1,11 +1,17 @@
 $(function () {
-    $('.banner__video-wrappe').bgVideo({
-        fullScreen: true
-    });
     dynamicGradient();
-    //dynamic gradient
+
+    $('nav').mobileMenu({
+        menuIconClassName: ".menu-icon",
+        mobileResolution: 768,
+        menuType: "fixed",
+        offsetToSticky: 50,
+        closeIconClassName: ".close-menu-icon"
+    });
+
     function dynamicGradient() {
         var colors = new Array(
+
   [62, 35, 255],
   [60, 255, 60],
   [255, 35, 98],
@@ -13,6 +19,10 @@ $(function () {
   [255, 0, 255],
   [255, 128, 0]);
 
+        /*
+    [0, 0, 0],
+    [239, 79, 179];
+    */
         var step = 0;
         //color table indices for: 
         // current color left

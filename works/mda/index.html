@@ -10,54 +10,119 @@
 </head>
 
 <body>
-    <heder class="header">
-
-        <nav class="menu gradient">
-            <div class="container flex-row jc-between ai-center">
-                <div class="menu__left flex-row jc-between ai-center">
+    <heder class="header" id="header">
+        <!--<nav class="menu gradien">
+            <div class="container flex-row flex-col-md jc-between ai-center ai-start-md">
+                <div class="menu__left col-6-md flex-row jc-between ai-center">
                     <div class="logo"><span class="logo--first-letter">M</span><span class="logo--second-letter">D</span><span class="logo--last-letter">A</span></div>
-                    <ul class="menu__list flex-row ai-center">
-                        <li class="menu__item"><a class="menu__link" href="">Главная</a></li>
-                        <li class="menu__item"><a class="menu__link" href="">Услуги</a></li>
+                    <ul class="menu__list flex-row flex-col-md ai-center">
+                        <li class="menu__item"><a class="menu__link" href="#header">Главная</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#about">Услуги</a></li>
                         <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="menu__right flex-row jc-between ai-center">
-                    <ul class="menu__list flex-row ai-center">
+                <div class="menu__right col-6-md flex-row jc-between jc-end-md ai-center">
+                    <ul class="menu__list flex-row flex-col-md ai-center">
                         <li class="menu__item"><a class="menu__link" href="">+386666666</a></li>
                         <li class="menu__item"><a class="menu__link" href="">email:olo@gml.com</a></li>
                     </ul>
                 </div>
+                <img src="img/menu.svg" class="menu-icon" alt="menu">
             </div>
         </nav>
+        -->
+        <nav class="menu gradien">
+            <div class="container menu-grid">
+                <!--
+                <div class="logo"><span class="logo--first-letter">M</span><span class="logo--second-letter">A</span><span class="logo--last-letter">D</span><br><span class="logo--sub">Vision</span></div>
+                -->
+                <div class="logo flex-col">MAD<span class="logo--sub">Vision</span>
+                </div>
+                <ul class="menu__left menu__list flex-row flex-col-md ai-center">
+                    <li class="menu__item"><a class="menu__link" href="#header">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#about">Услуги</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a></li>
+                </ul>
+                <ul class="menu__right menu__list flex-row flex-col-md ai-center">
+                    <li class="menu__item"><a class="menu__link" href="">+386666666</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">email:olo@gml.com</a></li>
+                </ul>
 
+                <img src="img/menu.svg" class="menu-icon" alt="menu">
+            </div>
+        </nav>
         <div class="banner">
             <div class="banner__video-wrapper flex-row centered">
                 <video class="video" loop autoplay muted playsinline poster="img/poster.png">
-                    <source src="video/video.mp4" type="video/mp4">
-                    <source src="path/to/video.webm" type="video/webm">
-                    <source src="path/to/video.ogv" type="video/ogg">
+                    <source src="video/vide.mp4" type="video/mp4">
                 </video>
                 <div class="overlay">
-                    <div class="about-text flex-row">
-                        <span class="first-word">Motion</span>
-                        <span class="second-word">Design</span>
-                        <span class="last-word">Addict</span>
+                    <div class="banner__text flex-row">
+                        <span class="banner__word banner__word--first-word">Motion</span>
+                        <span class="banner__word banner__word--second-word">Addict</span>
+                        <span class="banner__word banner__word--last-word">Design</span>
                     </div>
                 </div>
             </div>
         </div>
     </heder>
-    <section class="about">
+    <section class="about section" id="about">
         <div class="container">
-            <div class="flex-row jc-center">
+            <h3 class="about__title section__title ta-center">
+                Lorem ipsum dolor sit amet.
+            </h3>
+            <div class="flex-row jc-around ai-center">
+                <div class="img-container col-2 col-12-md"><img src="img/motion-graphics.svg" alt=""></div>
+                <p class="about__text col-6 col-12-md"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit vero quam numquam illum voluptate temporibus nam sit provident nulla voluptatem, quisquam placeat fuga nesciunt culpa, ad, dicta distinctio similique.</span>
+                    <span>Sint maxime atque, officiis error! Quae nihil consequatur minus accusantium dignissimos, voluptates labore, dolore doloribus quaerat inventore cum totam voluptatum nobis officiis deleniti fugiat deserunt! At eveniet similique cum, laborum!</span>
+                </p>
             </div>
         </div>
     </section>
+    <section class="services section">
+        <div class="container">
+            <h3 class="about__title section__title ta-center">
+                Lorem ipsum dolor sit amet.
+            </h3>
+            <div class="flex-row jc-between ai-center gap">
+                <p class="about__text col-5 col-12-md"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit vero quam numquam illum voluptate temporibus nam sit provident nulla voluptatem, quisquam placeat fuga nesciunt culpa, ad, dicta distinctio similique.</span>
+                    <span>Sint maxime atque, officiis error! Quae nihil consequatur minus accusantium dignissimos, voluptates labore, dolore doloribus quaerat inventore cum totam voluptatum nobis officiis deleniti fugiat deserunt! At eveniet similique cum, laborum!</span>
+                </p>
+                <div class="services__video thumb-wrap col-5"><iframe iframe width="560" height="315" src="https://www.youtube.com/embed/L3V7LKYPIUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts section">
+        <div class="container flex-col ai-center">
+            <h3 class="about__title section__title ta-center">
+                Lorem ipsum dolor sit amet.
+            </h3>
+            <div class="contacts__video thumb-wrap col-12"><iframe iframe width="560" height="315" src="https://www.youtube.com/embed/L3V7LKYPIUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+    </section>
+    <footer class="footer" id="contacts">
+        <div class="container flex-row jc-between">
+            <div class="contacts flex-col">
+                <h3 class="contacts__title">Contacts</h3>
+                <div class="contacts__email">madvs@gmaijkj</div>
+                <div class="contacts__telephone">+3456456464</div>
+            </div>
+            <div class="flex-col ai-center">
+                <div class="logo flex-col">MAD<span class="logo--sub">Vision</span>
+                </div>
+                <div class="copy">@2007</div>
+            </div>
+            <div class="adress flex-col">
+                <h3 class="adress__title">Location</h3>
+                <div>My St, 58, 124</div>
+            </div>
+        </div>
+    </footer>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.min.css">
     <script src="scripts.min.js"></script>
 </body>
